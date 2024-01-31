@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ShiftNotesAppApp: App {
+    @EnvironmentObject var notes: Notes
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Notes())
         }
     }
 }
